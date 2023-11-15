@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mycustom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url('Images/ContactUs.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: transform 0.3s;
+        margin-right: auto;
+        margin-left: -80px;
+    }
+
+    .logo:hover {
+        transform: rotate(360deg);
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+        background-color: #555;
+        color: #006eff;
+    }
+
+    .menu a.active {
+        background-color: #006eff;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .contact-form {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin: 10px 0;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group textarea {
+        height: 150px;
+    }
+
+    .btn {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #555;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #555;
+        color: #006eff;
+    }
+
+    .st0 {
+        fill: url(#SVGID_1_);
+    }
+
+    .st1 {
+        fill: #1B1464;
+    }
+
+    .st2 {
+        font-family: 'MongolianBaiti';
+    }
+
+    .st3 {
+        font-size: 138.8907px;
+    }
+
+    .st4 {
+        fill: #2E3192;
+    }
+
+    .st5 {
+        font-size: 131.9131px;
+    }
+
+    .st6 {
+        font-size: 40px;
+    }
+
+    .footer {
+        margin-top: auto;
+        background-color: #777777;
+        color: #fff;
+        text-align: center;
+        padding: 13px;
+        opacity: 0.8;
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768"
+                    style="enable-background:new 0 0 1366 768; width: 100%; height: 100%;">
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="550" y1="406.5" x2="859"
+                        y2="406.5">
+                        <stop offset="0" style="stop-color:#00B8E9" />
+                        <stop offset="0.1458" style="stop-color:#06B8EA;stop-opacity:0.8542" />
+                        <stop offset="0.3386" style="stop-color:#17B8ED;stop-opacity:0.6614" />
+                        <stop offset="0.5577" style="stop-color:#32B8F2;stop-opacity:0.4423" />
+                        <stop offset="0.7944" style="stop-color:#58B9F8;stop-opacity:0.2056" />
+                        <stop offset="1" style="stop-color:#7FB9FF;stop-opacity:0" />
+                    </linearGradient>
+                    <rect x="550" y="92" class="st0" width="309" height="629" />
+                    <text x="601" y="385" class="st1 st2 st3">W</text>
+                    <text x="723" y="464" class="st4 st2 st5">X</text>
+                    <text x="596" y="534" class="st4 st2 st6">World Xplore</text>
+                </svg>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Package Tours</a>
+                    <div class="dropdown-content">
+                        <a href="#">Tour 1</a>
+                        <a href="#">Tour 2</a>
+                        <a href="#">Tour 3</a>
+                    </div>
+                </div>
+                <a href="#">Rediscover Singapore</a>
+                <a href="#">Cruises</a>
+                <a href="Contact Us.php">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form action="process_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <section class="footer">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2023 World Xplore. All rights reserved.</p>
+                    <p>Contact us: info@worldxplore.com</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

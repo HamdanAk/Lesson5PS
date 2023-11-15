@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mycustom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    nav {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: transform 0.3s;
+        margin-right: auto;
+        margin-left: -80px;
+    }
+
+    .logo:hover {
+        transform: rotate(360deg);
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+        background-color: #555;
+        color: #006eff;
+    }
+
+    .menu a.active {
+        background-color: #006eff;
+        color: #333;
+    }
+
+
+    .card-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    .card {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px transparent;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        background-color: transparent;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        transition: filter 0.3s;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card img:hover {
+        filter: grayscale(100%);
+    }
+
+    .card-body {
+        padding: 20px;
+        flex: 1;
+        background-color: transparent;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .footer {
+        background-color: #777777;
+        color: #fff;
+        text-align: center;
+        padding: 13px;
+        opacity: 0.8;
+    }
+
+    #video-background {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    @media only screen and (max-width: 768px) {
+        #video-background {
+            display: none;
+        }
+
+        body {
+            background-image: url('Images/GardensByTheBay.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            width: calc(100% - 20px);
+        }
+
+        .card-body {
+            padding: 1.2rem;
+        }
+
+        .card-title {
+            font-size: 20px;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+        }
+
+        .menu a {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #555;
+        color: #006eff !important;
+    }
+
+    .st0 {
+        fill: url(#SVGID_1_);
+    }
+
+    .st1 {
+        fill: #1B1464;
+    }
+
+    .st2 {
+        font-family: 'MongolianBaiti';
+    }
+
+    .st3 {
+        font-size: 138.8907px;
+    }
+
+    .st4 {
+        fill: #2E3192;
+    }
+
+    .st5 {
+        font-size: 131.9131px;
+    }
+
+    .st6 {
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768"
+                    style="enable-background:new 0 0 1366 768; width: 100%; height: 100%;">
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="550" y1="406.5" x2="859"
+                        y2="406.5">
+                        <stop offset="0" style="stop-color:#00B8E9" />
+                        <stop offset="0.1458" style="stop-color:#06B8EA;stop-opacity:0.8542" />
+                        <stop offset="0.3386" style="stop-color:#17B8ED;stop-opacity:0.6614" />
+                        <stop offset="0.5577" style="stop-color:#32B8F2;stop-opacity:0.4423" />
+                        <stop offset="0.7944" style="stop-color:#58B9F8;stop-opacity:0.2056" />
+                        <stop offset="1" style="stop-color:#7FB9FF;stop-opacity:0" />
+                    </linearGradient>
+                    <rect x="550" y="92" class="st0" width="309" height="629" />
+                    <text x="601" y="385" class="st1 st2 st3">W</text>
+                    <text x="723" y="464" class="st4 st2 st5">X</text>
+                    <text x="596" y="534" class="st4 st2 st6">World Xplore</text>
+                </svg>
+            </div>
+            <div class="menu">
+                <a href="#" class="active">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Package Tours</a>
+                    <div class="dropdown-content">
+                        <a href="#">Singapore</a>
+                        <a href="#">Sri Lanka</a>
+                        <a href="#">Maldives</a>
+                    </div>
+                </div>
+                <a href="#">Rediscover Singapore</a>
+                <a href="#">Cruises</a>
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <video id="video-background" autoplay muted loop playsinline>
+        <source src="video/background-video.mp4" type="video/mp4">
+    </video>
+    <section class="card-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="Images/MBS.jpg">
+                        <div class="card-body bg-dark text-white">
+                            <h4 class="card-title">Marina Bay Sands</h4>
+                            <p class="card-text">Discover the epitome of luxury and excitement at Marina Bay Sands,
+                                an iconic destination that will take your breath away. Soaring above
+                                the Singapore skyline, our architectural marvel offers a world of
+                                experiences like no other. Plunge into our breathtaking infinity pool,
+                                dine at award-winning restaurants, indulge in high-end shopping, and
+                                explore the vibrant entertainment options. With its stunning design and
+                                unbeatable views, Marina Bay Sands promises an unforgettable adventure
+                                that combines elegance, thrill, and sheer opulence. Come and live the
+                                extraordinary at Marina Bay Sands, where every moment is a masterpiece.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="Images/USS.jpg">
+                        <div class="card-body bg-dark text-white">
+                            <h4 class="card-title">Universal Studios Singapore</h4>
+                            <p class="card-text">Get ready for an adventure like no other at Universal Studios
+                                Singapore!
+                                Step into the magic of your favorite movies and immerse yourself in thrilling
+                                rides, live shows, and interactive attractions. From the enchanting world of
+                                Harry Potter to the heart-pounding action of Transformers, there's something
+                                for every member of the family. Meet your beloved movie characters, enjoy
+                                delicious treats, and make memories that will last a lifetime. Universal Studios
+                                Singapore
+                                is where dreams come to life and endless fun begins. Don't miss the chance to
+                                experience the magic of the silver screen - right before your eyes!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="Images/NationalMuseum.jpg">
+                        <div class="card-body bg-dark text-white">
+                            <h4 class="card-title">National Museum Singapore</h4>
+                            <p class="card-text">Delve into the rich tapestry of Singapore's history and culture at the
+                                National Museum Singapore.
+                                Located in the heart of the city, this architectural gem invites you to journey through
+                                time and
+                                explore the captivating stories that have shaped our nation. Marvel at awe-inspiring
+                                exhibits,
+                                timeless artifacts, and immersive multimedia displays that bring history to life. From
+                                ancient
+                                civilizations to modern innovations, the National Museum offers a fascinating glimpse
+                                into Singapore's
+                                past, present, and future. Join us in celebrating our heritage, igniting your curiosity,
+                                and leaving
+                                with a deeper understanding of this remarkable island nation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2023 World Xplore. All rights reserved.</p>
+                    <p>Contact us: info@worldxplore.com</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
